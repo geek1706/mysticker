@@ -1,23 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { AngularFireModule } from 'angularfire2';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-// Must export the config
-export const firebaseConfig = {
-  apiKey: "AIzaSyDWTOP-ADRJ0gInos8xPj_C8h5tGcsYtGI",
-  authDomain: "sticker-store-8846d.firebaseapp.com",
-  databaseURL: "https://sticker-store-8846d.firebaseio.com",
-  storageBucket: "sticker-store-8846d.appspot.com",
-  messagingSenderId: "831121864728"
-};
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard.component';
+import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent } from './heroes.component';
+import { HeroService } from './hero.service';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-imports: [
-BrowserModule,
-AngularFireModule.initializeApp(firebaseConfig)
-],
-declarations: [ AppComponent ],
-bootstrap: [ AppComponent ]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    HeroDetailComponent,
+    HeroesComponent
+  ],
+  providers: [HeroService],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
