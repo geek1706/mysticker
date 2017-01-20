@@ -1,4 +1,4 @@
-export class Hero {
+export class Sticker {
   id: number;
   name: string;
 }

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroService } from './hero.service';
+import { StickerDetailComponent } from './sticker-detail.component';
+import { StickersComponent } from './stickers.component';
+import { StickerService } from './sticker.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,10 +19,10 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroDetailComponent,
-    HeroesComponent
+    StickerDetailComponent,
+    StickersComponent
   ],
-  providers: [HeroService],
+  providers: [StickerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

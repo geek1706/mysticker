@@ -1,6 +1,6 @@
-import { Hero } from './hero';
+import { Sticker } from './sticker';
 
-export var HEROES: Hero[] = [
+export var STICKERS: Sticker[] = [
   {id: 11, name: 'Mr. Nice'},
   {id: 12, name: 'Narco'},
   {id: 13, name: 'Bombasto'},
