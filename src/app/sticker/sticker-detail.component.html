@@ -1,0 +1,17 @@
+<div *ngIf="sticker">
+  <h2>{{sticker.name}} details!</h2>
+  <div>
+    <label>id: </label>{{sticker.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="sticker.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
+
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
