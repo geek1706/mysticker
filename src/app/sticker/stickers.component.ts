@@ -10,7 +10,7 @@ import { StickerService } from './sticker.service';
   moduleId: module.id,
   selector: 'my-stickers',
   templateUrl: 'stickers.component.html',
-  styleUrls: [ 'stickers.component.css' ]
+  styleUrls: ['stickers.component.css']
 })
 export class StickersComponent implements OnInit {
   stickers: FirebaseListObservable<Sticker[]>;
@@ -20,12 +20,8 @@ export class StickersComponent implements OnInit {
     private router: Router,
     private service: StickerService) { }
 
-  getStickers(): void {
-    this.stickers = this.service.stickers
-  }
-
   ngOnInit(): void {
-    this.getStickers();
+    this.stickers = this.service.stickers
   }
 
   onSelect(sticker: Sticker): void {
