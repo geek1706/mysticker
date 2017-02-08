@@ -14,7 +14,9 @@ export class DashboardComponent implements OnInit {
 
   constructor(private service: StickerService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }
 
 
