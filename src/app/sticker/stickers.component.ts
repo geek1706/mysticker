@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { FirebaseListObservable } from 'angularfire2'
+
 import { Sticker } from './sticker';
 import { StickerService } from './sticker.service';
 
@@ -11,15 +13,15 @@ import { StickerService } from './sticker.service';
   styleUrls: [ 'stickers.component.css' ]
 })
 export class StickersComponent implements OnInit {
-  stickers: Sticker[];
+  stickers: FirebaseListObservable<Sticker[]>;
   selectedSticker: Sticker;
 
   constructor(
     private router: Router,
-    private heroService: StickerService) { }
+    private service: StickerService) { }
 
   getStickers(): void {
-    this.heroService.getStickers().then(stickers => this.stickers = stickers);
+    this.stickers = this.service.stickers
   }
 
   ngOnInit(): void {

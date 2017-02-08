@@ -5,10 +5,10 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class StickerService {
-  private stickers: FirebaseListObservable<Sticker[]>;
+  stickers: FirebaseListObservable<Sticker[]>;
 
   constructor(af: AngularFire) {
-    const path = `/contents`;
+    const path = `/stickers`;
     this.stickers = af.database.list(path);
   }
 }

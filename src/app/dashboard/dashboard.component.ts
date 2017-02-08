@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2'
 import { Sticker } from '../sticker/sticker';
 import { StickerService } from '../sticker/sticker.service';
 
@@ -9,13 +9,12 @@ import { StickerService } from '../sticker/sticker.service';
   templateUrl: 'dashboard.component.html',
   styleUrls: [ 'dashboard.component.css' ]
 })
-export class DashboardComponent implements OnInit {
-  stickers: Sticker[] = [];
 
-  constructor(private service: StickerService) {}
+export class DashboardComponent {
+  private stickers: FirebaseListObservable<Sticker[]>
 
-  ngOnInit(): void {
-    
+  constructor(private service: StickerService) {
+    this.stickers = service.stickers
   }
 }
 

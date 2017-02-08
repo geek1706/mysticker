@@ -1,9 +1,9 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent }   from './dashboard.component';
-import { StickersComponent }      from './stickers.component';
-import { StickerDetailComponent }  from './sticker-detail.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { StickersComponent }      from './sticker/stickers.component';
+import { StickerDetailComponent }  from './sticker/sticker-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
