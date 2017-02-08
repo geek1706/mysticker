@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { StickerDetailComponent } from './sticker-detail.component';
-import { StickersComponent } from './stickers.component';
-import { StickerService } from './sticker.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { StickerDetailComponent } from './sticker/sticker-detail.component';
+import { StickersComponent } from './sticker/stickers.component';
+import { StickerService } from './sticker/sticker.service';
 import { AppRoutingModule } from './app-routing.module';
 
 // Must export the config

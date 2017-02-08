@@ -21,9 +21,6 @@ export class StickerDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params
-      .switchMap((params: Params) => this.heroService.getSticker(+params['id']))
-      .subscribe(sticker => this.sticker = sticker);
   }
 
   goBack(): void {
